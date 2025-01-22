@@ -1,0 +1,575 @@
+{
+    "API Management": {
+        "quotient": 1.2
+    },
+    "Advanced Container Networking Services": {
+        "quotient": 1.5
+    },
+    "App Configuration": {
+        "quotient": 1.1
+    },
+    "App Service": {
+        "quotient": 1.3
+    },
+    "App Service (Linux)": {
+        "quotient": 1.4
+    },
+    "Application Gateway": {
+        "quotient": 1.6
+    },
+    "Automation": {
+        "quotient": 1.0
+    },
+    "Azure AI Bot Service": {
+        "quotient": 1.8
+    },
+    "Azure AI Search": {
+        "quotient": 1.7
+    },
+    "Azure AI Studio": {
+        "quotient": 1.9
+    },
+    "Azure AI services": {
+        "quotient": 2.0
+    },
+    "Azure API Center": {
+        "quotient": 1.2
+    },
+    "Azure Active Directory B2C": {
+        "quotient": 1.3
+    },
+    "Azure Advisor": {
+        "quotient": 1.1
+    },
+    "Azure Analysis Services": {
+        "quotient": 1.4
+    },
+    "Azure Arc": {
+        "quotient": 1.5
+    },
+    "Azure Automanage": {
+        "quotient": 1.6
+    },
+    "Azure Backup": {
+        "quotient": 1.7
+    },
+    "Azure Bastion": {
+        "quotient": 1.8
+    },
+    "Azure Blockchain Service": {
+        "quotient": 1.9
+    },
+    "Azure Blockchain Tokens": {
+        "quotient": 2.0
+    },
+    "Azure Blueprints": {
+        "quotient": 1.1
+    },
+    "Azure Cache for Redis": {
+        "quotient": 1.2
+    },
+    "Azure Center for SAP solutions": {
+        "quotient": 1.3
+    },
+    "Azure Chaos Studio": {
+        "quotient": 1.4
+    },
+    "Azure Communication Services": {
+        "quotient": 1.5
+    },
+    "Azure Communications Gateway": {
+        "quotient": 1.6
+    },
+    "Azure Compute fleet": {
+        "quotient": 1.7
+    },
+    "Azure Container Apps": {
+        "quotient": 1.8
+    },
+    "Azure Container Instances": {
+        "quotient": 1.9
+    },
+    "Azure Container Registry": {
+        "quotient": 2.0
+    },
+    "Azure Container Service": {
+        "quotient": 1.1
+    },
+    "Azure Container Storage": {
+        "quotient": 1.2
+    },
+    "Azure Cosmos DB": {
+        "quotient": 1.3
+    },
+    "Azure DDoS Protection": {
+        "quotient": 1.4
+    },
+    "Azure DNS": {
+        "quotient": 1.5
+    },
+    "Azure Data Box": {
+        "quotient": 1.6
+    },
+    "Azure Data Explorer": {
+        "quotient": 1.7
+    },
+    "Azure Data Factory": {
+        "quotient": 1.8
+    },
+    "Azure Data Lake Storage Gen1": {
+        "quotient": 1.9
+    },
+    "Azure Data Manager for Energy": {
+        "quotient": 2.0
+    },
+    "Azure Data Share": {
+        "quotient": 1.1
+    },
+    "Azure Database Migration Service (classic)": {
+        "quotient": 1.2
+    },
+    "Azure Database for MariaDB": {
+        "quotient": 1.3
+    },
+    "Azure Database for MySQL": {
+        "quotient": 1.4
+    },
+    "Azure Database for PostgreSQL": {
+        "quotient": 1.5
+    },
+    "Azure Databricks": {
+        "quotient": 1.6
+    },
+    "Azure Dedicated HSM": {
+        "quotient": 1.7
+    },
+    "Azure Deployment Environments": {
+        "quotient": 1.8
+    },
+    "Azure DevOps": {
+        "quotient": 1.9
+    },
+    "Azure DevTest Labs": {
+        "quotient": 2.0
+    },
+    "Azure Device Registry": {
+        "quotient": 1.1
+    },
+    "Azure Digital Twins": {
+        "quotient": 1.2
+    },
+    "Azure Elastic SAN": {
+        "quotient": 1.3
+    },
+    "Azure ExpressRoute": {
+        "quotient": 1.4
+    },
+    "Azure Firewall": {
+        "quotient": 1.5
+    },
+    "Azure Firewall Manager": {
+        "quotient": 1.6
+    },
+    "Azure Fluid Relay": {
+        "quotient": 1.7
+    },
+    "Azure Front Door": {
+        "quotient": 1.8
+    },
+    "Azure Functions": {
+        "quotient": 1.9
+    },
+    "Azure HDInsight on AKS": {
+        "quotient": 2.0
+    },
+    "Azure HPC Cache": {
+        "quotient": 1.1
+    },
+    "Azure Health Data Services": {
+        "quotient": 1.2
+    },
+    "Azure Information Protection": {
+        "quotient": 1.3
+    },
+    "Azure Internet Analyzer": {
+        "quotient": 1.4
+    },
+    "Azure IoT Central": {
+        "quotient": 1.5
+    },
+    "Azure IoT Hub": {
+        "quotient": 1.6
+    },
+    "Azure IoT Operations": {
+        "quotient": 1.7
+    },
+    "Azure Kubernetes Fleet Manager": {
+        "quotient": 1.8
+    },
+    "Azure Kubernetes Service (AKS)": {
+        "quotient": 1.9
+    },
+    "Azure Kubernetes Service on Azure Stack HCI": {
+        "quotient": 2.0
+    },
+    "Azure Lab Services": {
+        "quotient": 1.1
+    },
+    "Azure Lighthouse": {
+        "quotient": 1.2
+    },
+    "Azure Load Testing": {
+        "quotient": 1.3
+    },
+    "Azure Machine Learning": {
+        "quotient": 1.4
+    },
+    "Azure Managed Applications": {
+        "quotient": 1.5
+    },
+    "Azure Managed Confidential Consortium Framework": {
+        "quotient": 1.6
+    },
+    "Azure Managed Grafana": {
+        "quotient": 1.7
+    },
+    "Azure Managed Instance for Apache Cassandra": {
+        "quotient": 1.8
+    },
+    "Azure Managed Lustre": {
+        "quotient": 1.9
+    },
+    "Azure Maps": {
+        "quotient": 2.0
+    },
+    "Azure Migrate": {
+        "quotient": 1.1
+    },
+    "Azure Modeling and Simulation Workbench": {
+        "quotient": 1.2
+    },
+    "Azure Modular Datacenter": {
+        "quotient": 1.3
+    },
+    "Azure Monitor": {
+        "quotient": 1.4
+    },
+    "Azure Monitor for SAP solutions": {
+        "quotient": 1.5
+    },
+    "Azure NAT Gateway": {
+        "quotient": 1.6
+    },
+    "Azure NetApp Files": {
+        "quotient": 1.7
+    },
+    "Azure Network Function Manager": {
+        "quotient": 1.8
+    },
+    "Azure Open Datasets": {
+        "quotient": 1.9
+    },
+    "Azure Operator 5G Core": {
+        "quotient": 2.0
+    },
+    "Azure Operator Insights": {
+        "quotient": 1.1
+    },
+    "Azure Operator Service Manager": {
+        "quotient": 1.2
+    },
+    "Azure Orbital Ground Station": {
+        "quotient": 1.3
+    },
+    "Azure Payment HSM": {
+        "quotient": 1.4
+    },
+    "Azure Percept": {
+        "quotient": 1.5
+    },
+    "Azure Policy": {
+        "quotient": 1.6
+    },
+    "Azure Private 5G Core": {
+        "quotient": 1.7
+    },
+    "Azure Private Link": {
+        "quotient": 1.8
+    },
+    "Azure Programmable Connectivity": {
+        "quotient": 1.9
+    },
+    "Azure Quantum": {
+        "quotient": 2.0
+    },
+    "Azure Red Hat OpenShift": {
+        "quotient": 1.1
+    },
+    "Azure Resource Graph": {
+        "quotient": 1.2
+    },
+    "Azure Resource Manager": {
+        "quotient": 1.3
+    },
+    "Azure Route Server": {
+        "quotient": 1.4
+    },
+    "Azure SQL": {
+        "quotient": 1.5
+    },
+    "Azure SQL Database": {
+        "quotient": 1.6
+    },
+    "Azure SQL Edge": {
+        "quotient": 1.7
+    },
+    "Azure Service Fabric": {
+        "quotient": 1.8
+    },
+    "Azure Service Health": {
+        "quotient": 1.9
+    },
+    "Azure SignalR Service": {
+        "quotient": 2.0
+    },
+    "Azure Site Recovery": {
+        "quotient": 1.1
+    },
+    "Azure Sphere": {
+        "quotient": 1.2
+    },
+    "Azure Spring Apps": {
+        "quotient": 1.3
+    },
+    "Azure Stack": {
+        "quotient": 1.4
+    },
+    "Azure Stack Edge": {
+        "quotient": 1.5
+    },
+    "Azure Storage Actions": {
+        "quotient": 1.6
+    },
+    "Azure Storage Mover": {
+        "quotient": 1.7
+    },
+    "Azure Stream Analytics": {
+        "quotient": 1.8
+    },
+    "Azure Synapse Analytics": {
+        "quotient": 1.9
+    },
+    "Azure Time Series Insights": {
+        "quotient": 2.0
+    },
+    "Azure Update Manager": {
+        "quotient": 1.1
+    },
+    "Azure VM Image Builder": {
+        "quotient": 1.2
+    },
+    "Azure VMware Solution": {
+        "quotient": 1.3
+    },
+    "Azure VMware Solution by CloudSimple": {
+        "quotient": 1.4
+    },
+    "Azure Virtual Desktop": {
+        "quotient": 1.5
+    },
+    "Azure Virtual Network Manager": {
+        "quotient": 1.6
+    },
+    "Azure Web PubSub": {
+        "quotient": 1.7
+    },
+    "Azure confidential ledger": {
+        "quotient": 1.8
+    },
+    "Batch": {
+        "quotient": 1.9
+    },
+    "Cloud Services": {
+        "quotient": 2.0
+    },
+    "Cloud Shell": {
+        "quotient": 1.1
+    },
+    "Content Delivery Network": {
+        "quotient": 1.2
+    },
+    "Data Catalog": {
+        "quotient": 1.3
+    },
+    "Data Lake Analytics": {
+        "quotient": 1.4
+    },
+    "Defender External Attack Surface Management": {
+        "quotient": 1.5
+    },
+    "Event Grid": {
+        "quotient": 1.6
+    },
+    "Event Hubs": {
+        "quotient": 1.7
+    },
+    "Global Secure Access": {
+        "quotient": 1.8
+    },
+    "HDInsight": {
+        "quotient": 1.9
+    },
+    "HDInsight on AKS": {
+        "quotient": 2.0
+    },
+    "Key Vault": {
+        "quotient": 1.1
+    },
+    "Load Balancer": {
+        "quotient": 1.2
+    },
+    "Logic Apps": {
+        "quotient": 1.3
+    },
+    "Machine Learning Studio (classic)": {
+        "quotient": 1.4
+    },
+    "Managed Disks": {
+        "quotient": 1.5
+    },
+    "Media Services": {
+        "quotient": 1.6
+    },
+    "Microsoft Azure Attestation": {
+        "quotient": 1.7
+    },
+    "Microsoft Azure Data Manager for Agriculture": {
+        "quotient": 1.8
+    },
+    "Microsoft Azure portal": {
+        "quotient": 1.9
+    },
+    "Microsoft Defender for Cloud": {
+        "quotient": 2.0
+    },
+    "Microsoft Dev Box": {
+        "quotient": 1.1
+    },
+    "Microsoft Entra Domain Services": {
+        "quotient": 1.2
+    },
+    "Microsoft Entra ID (formerly Azure AD)": {
+        "quotient": 1.3
+    },
+    "Microsoft Fabric": {
+        "quotient": 1.4
+    },
+    "Microsoft Genomics": {
+        "quotient": 1.5
+    },
+    "Microsoft Graph": {
+        "quotient": 1.6
+    },
+    "Microsoft Graph Data Connect": {
+        "quotient": 1.7
+    },
+    "Microsoft Healthcare Bot": {
+        "quotient": 1.8
+    },
+    "Microsoft Playwright Testing": {
+        "quotient": 1.9
+    },
+    "Microsoft Purview": {
+        "quotient": 2.0
+    },
+    "Microsoft Sentinel": {
+        "quotient": 1.1
+    },
+    "Mobile Services": {
+        "quotient": 1.2
+    },
+    "NGINXaaS": {
+        "quotient": 1.3
+    },
+    "Network Infrastructure": {
+        "quotient": 1.4
+    },
+    "Network Watcher": {
+        "quotient": 1.5
+    },
+    "Notification Hubs": {
+        "quotient": 1.6
+    },
+    "Object Anchors": {
+        "quotient": 1.7
+    },
+    "Oracle Database@Azure": {
+        "quotient": 1.8
+    },
+    "Power BI Embedded": {
+        "quotient": 1.9
+    },
+    "Recovery Manager": {
+        "quotient": 2.0
+    },
+    "Remote Rendering": {
+        "quotient": 1.1
+    },
+    "SQL Data Warehouse": {
+        "quotient": 1.2
+    },
+    "SQL Reporting": {
+        "quotient": 1.3
+    },
+    "SQL Server Stretch Database": {
+        "quotient": 1.4
+    },
+    "Scheduler": {
+        "quotient": 1.5
+    },
+    "Service Bus": {
+        "quotient": 1.6
+    },
+    "Shared Caching": {
+        "quotient": 1.7
+    },
+    "Spatial Anchors": {
+        "quotient": 1.8
+    },
+    "StorSimple": {
+        "quotient": 1.9
+    },
+    "Storage Accounts": {
+        "quotient": 2.0
+    },
+    "Traffic Manager": {
+        "quotient": 1.1
+    },
+    "Trusted Signing": {
+        "quotient": 1.2
+    },
+    "Universal Print": {
+        "quotient": 1.3
+    },
+    "VPN Gateway": {
+        "quotient": 1.4
+    },
+    "Virtual Machine Scale Sets": {
+        "quotient": 1.5
+    },
+    "Virtual Machines": {
+        "quotient": 1.6
+    },
+    "Virtual Network": {
+        "quotient": 1.7
+    },
+    "Virtual WAN": {
+        "quotient": 1.8
+    },
+    "Web Application Firewall": {
+        "quotient": 1.9
+    },
+    "Web Apps": {
+        "quotient": 2.0
+    }
+}

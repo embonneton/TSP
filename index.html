@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trouver le Datacenter le Plus Proche</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Projet RSE - Azure</h1>
+        <form id="locationForm">
+            <label for="country">Pays :</label>
+            <select id="country" name="country" required>
+                <!-- Les options seront ajoutées ici par JavaScript -->
+            </select>
+            <br/>
+            <div id="serviceContainer">
+                <label for="service">Service Azure :</label>
+                <select id="service0" name="service" required>
+                    <!-- Les options seront ajoutées ici par JavaScript -->
+                </select>
+                <br/>
+            </div>
+            <button type="button" id="addServiceButton">Ajouter un Service</button>
+            <button type="button" id="removeServiceButton">Enlever le Dernier Service</button>
+            <br/>
+            <button type="submit">Calculer</button> 
+        </form>
+
+        <br/>
+
+        <div class="tabs">
+            <button class="tablinks" onclick="openTab(event, 'top5')" id="defaultOpen">TOP 5</button>
+            <button class="tablinks" onclick="openTab(event, 'allRegions')">Toutes les régions</button>
+        </div>
+        <div id="top5" class="tabcontent">
+            <div class="result" id="top5Result"></div>
+            <br/>
+            <div id="top5Map" class="map"></div>
+        </div>
+        <div id="allRegions" class="tabcontent">
+            <div class="result" id="allRegionsResult"></div>
+            <br/>
+            <div id="allRegionsMap" class="map"></div>
+        </div>
+    </div>
+    <br/>
+    <textarea id="projectDescription" readonly>
+        Ceci est la maquette d'un projet pour le module Responsabilité Sociétale des Entreprises (RSE). Cette page est un outil permettant de choisir le datacenter Azure le plus adapté à vos besoins.
+        Mode d'emploi :
+        1. Sélectionnez le pays des consommateurs du service.
+        2. Ajoutez les services Azure prévus à l'aide des boutons "Ajouter un Service" ou "Enlever le Dernier Service".
+        3. Cliquez sur "Calculer" pour comparer les options.
+        
+        Dans l'onglet "Top 5", vous verrez les 5 datacenters les plus proches. L'onglet "Toutes les régions" affiche toutes les régions Azure.
+        
+        Chaque onglet contient une liste de résultats avec les colonnes suivantes :
+        - "Nom" : Nom de la région.
+        - "Ville" : Ville du datacenter.
+        - "Disponibilités des Services Sélectionnés" : Services disponibles (vert) ou non disponibles (rouge).
+        - "Score Écologique" : Efficacité énergétique (plus haut est mieux).
+        - "Coût écologique" : Impact environnemental (plus bas est mieux).
+        - "Coût financier" : Coût des services (plus bas est mieux).
+    </textarea>
+    <br/>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
