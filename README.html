@@ -18,8 +18,8 @@
             })
             .then(markdown => {
                 // Vérifie si Marked est disponible
-                if (typeof marked === 'function') {
-                    document.getElementById('content').innerHTML = marked(markdown);
+                if (typeof marked === 'object') {
+                    document.getElementById('content').innerHTML = marked.parse(markdown);
                 } else {
                     console.error("Marked n'est pas disponible.");
                 }
