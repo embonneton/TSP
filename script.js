@@ -54,18 +54,15 @@ async function displayResult(dataCenters, totalConso, selectedServices) {
                 <th>Nom</th>
                 <th>Ville</th>
                 <th>Disponibilités des Services Sélectionnés</th>
-                <th>Coût des Services Sélectionnés</th>
-                <th>Score Écologique (plus haut possible)</th>
-                <th>Coût écologique (plus bas possible)</th>
-                <th>Coût financier de computing (plus bas possible)</th>
+                <th>Efficacité énergétique</th>
+                <th>Impact environnemental</th>
+                <th>Coût des services</th>
             </tr>
             ${dataCentersWithScores.slice(0, 5).map(dataCenter => 
                 `<tr>
                     <td><a href="${dataCenter.announcementLink}" target="_blank">${dataCenter.displayName}</a></td>
                     <td>${dataCenter.location}</td>
                     <td>${dataCenter.servicesAvailability.join(', ')}</td>
-                    <td>${totalConso}</td>
-
                     <td>${dataCenter.score}</td>
                     <td>${isNaN(totalConso * dataCenter.score) ? "Non connu" : (totalConso * dataCenter.score).toFixed(2)}</td>
                     <td>${isNaN(totalConso * dataCenter.price) ? "Non connu" : (totalConso * dataCenter.price).toFixed(2)}</td>
