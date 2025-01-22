@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>README</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+            background: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">Chargement du contenu...</div>
+    <script>
+        // Chemin vers le fichier README.md
+        const markdownFile = 'README.md';
+
+        // Récupération et rendu du contenu Markdown
+        fetch(markdownFile)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Erreur lors du chargement du fichier: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(markdown => {
+                // Conversion du Markdown en HTML
+                document.getElementById('content').innerHTML = marked(markdown);
+            })
+            .catch(error => {
+                document.getElementById('content').textContent = `Erreur : ${error.message}`;
+            });
+    </script>
+</body>
+</html>
