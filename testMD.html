@@ -9,7 +9,7 @@
     <div id="content"></div>
     <script>
         if (typeof marked === 'function') {
-            document.getElementById('content').innerHTML = marked('# Test avec Marked\n\nCeci est un exemple de Markdown.');
+            document.getElementById('content').innerHTML = marked.parse('# Test avec Marked\n\nCeci est un exemple de Markdown.');
         } else {
             console.error("Marked n'est pas disponible.");
         }
