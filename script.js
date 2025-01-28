@@ -44,7 +44,7 @@ async function displayResult(dataCenters, totalConso, selectedServices) {
 
     const dataCentersWithScores = await Promise.all(dataCentersAvailability.map(async dataCenter => {
         const score = await calculateRegionScore(dataCenter.id);
-        const price = regionPrices[dataCenter.id.toLowerCase()] || "Non connu";
+        const price = regionPrices[dataCenter.id.toLowerCase()] || "-";
         return { ...dataCenter, score, price };
     }));
 
@@ -64,8 +64,8 @@ async function displayResult(dataCenters, totalConso, selectedServices) {
                     <td>${dataCenter.location}</td>
                     <td>${dataCenter.servicesAvailability.join(', ')}</td>
                     <td>${dataCenter.score}</td>
-                    <td>${isNaN(totalConso * dataCenter.score) ? "Non connu" : (totalConso * dataCenter.score).toFixed(2)}</td>
-                    <td>${isNaN(totalConso * dataCenter.price) ? "Non connu" : (totalConso * dataCenter.price).toFixed(2)}</td>
+                    <td>${isNaN(totalConso * dataCenter.score) ? "-" : (totalConso * dataCenter.score).toFixed(2)}</td>
+                    <td>${isNaN(totalConso * dataCenter.price) ? "-" : (totalConso * dataCenter.price).toFixed(2)}</td>
                 </tr>`
             ).join('')}
         </table>
@@ -89,8 +89,8 @@ async function displayResult(dataCenters, totalConso, selectedServices) {
                     <td>${dataCenter.servicesAvailability.join(', ')}</td>
                     <td>${totalConso}</td>
                     <td>${dataCenter.score}</td>
-                    <td>${isNaN(totalConso * dataCenter.score) ? "Non connu" : (totalConso * dataCenter.score).toFixed(2)}</td>
-                    <td>${isNaN(totalConso * dataCenter.price) ? "Non connu" : (totalConso * dataCenter.price).toFixed(2)}</td>
+                    <td>${isNaN(totalConso * dataCenter.score) ? "-" : (totalConso * dataCenter.score).toFixed(2)}</td>
+                    <td>${isNaN(totalConso * dataCenter.price) ? "-" : (totalConso * dataCenter.price).toFixed(2)}</td>
                 </tr>`
             ).join('')}
         </table>
@@ -293,7 +293,7 @@ async function calculateRegionScore(regionId) {
 
         if (!regionData) {
             console.error('Région non trouvée dans les données:', regionId);
-            return "Non connu";
+            return "-";
         }
 
         const pue = parseFloat(regionData.carbon.pue);
@@ -310,7 +310,7 @@ async function calculateRegionScore(regionId) {
         return finalScore.toFixed(2); // On arrondit à 2 décimales
     } catch (error) {
         console.error('Erreur lors du chargement des données des régions:', error);
-        return "Non connu";
+        return "-";
     }
 }
 
