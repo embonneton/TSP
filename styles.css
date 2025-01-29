@@ -44,7 +44,7 @@ th {
     margin-bottom: 10px;
 }
 
-#addServiceButton, #removeServiceButton {
+#addServiceButton, #removeServiceButton, #calculateButton {
     margin-top: 10px;
     padding: 8px 16px;
     border: none;
@@ -55,7 +55,7 @@ th {
     transition: background-color 0.3s;
 }
 
-#addServiceButton:hover, #removeServiceButton:hover {
+#addServiceButton:hover, #removeServiceButton:hover, #calculateButton:hover {
     background-color: #0056b3;
 }
 
@@ -98,7 +98,7 @@ th {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    background-color: ##ffffff;
+    background-color: #ffffff;
     text-align: center;
 }
 
@@ -127,4 +127,15 @@ footer {
     text-align: center;
     border-top: 1px solid #ddd;
     margin-top: 20px;
+}
+
+.footer-link {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #0056b3;
 }
