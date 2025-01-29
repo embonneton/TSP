@@ -102,3 +102,21 @@ th {
     resize: none;
     background-color: #f9f9f9;
 }
+
+.documentation-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.documentation-button:hover {
+    background-color: #0056b3;
+}
