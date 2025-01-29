@@ -2,7 +2,7 @@
 
 Ce projet consiste en la conception d’un outil permettant de sélectionner le datacenter Azure le plus adapté aux besoins des utilisateurs. L’outil a été développé à partir des sources de données suivantes :  
 - [Régions Azure – Données sur la durabilité](https://github.com/autosysops/azure_sustainability_data/blob/main/regiondata.json)  
-- [Performances et coûts des services cloud](https://cloudprice.net/performance)  
+- [Coûts par régions Azure](https://cloudprice.net/regions)  
 - [Produits Azure par région](https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/table)  
 - [Informations sur les datacenters Microsoft](https://datacenters.microsoft.com/globe/data/geo/regions.json)  
 
@@ -25,9 +25,8 @@ Chaque onglet présente les résultats sous forme de tableau avec les colonnes s
 
 Les résultats sont exprimés sans unité de mesure pour simplifier la comparaison.
 
-\
-
-\
+\newline
+\newline
 
 # Documentation des Résultats Affichés dans les Colonnes
 
@@ -41,12 +40,12 @@ Le script `script.js` gère la soumission d'un formulaire pour calculer et affic
 
 ## Fichiers Utilisés
 
-- `regions.json` : Données des datacenters.
+- `regions.json` : Données des datacenters ([Informations sur les datacenters Microsoft](https://datacenters.microsoft.com/globe/data/geo/regions.json))
 - `countries.json` : Données des pays.
-- `services_conso.json` : Données des services et leur consommation.
-- `services_regions.json` : Disponibilité des services dans les régions.
-- `regions_conso.json` : Données de consommation des régions.
-- `regions_prix.json` : Prix des services dans les régions.
+- `services_conso.json` : Données des services et leur consommation (valeurs arbitraires)
+- `services_regions.json` : Disponibilité des services dans les régions ([Produits Azure par région](https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/table))
+- `regions_conso.json` : Données de consommation des régions ([Régions Azure – Données sur la durabilité](https://github.com/autosysops/azure_sustainability_data/blob/main/regiondata.json))
+- `regions_prix.json` : Prix des services dans les régions ([Coûts par régions Azure](https://cloudprice.net/regions))
 
 ## Formule de Calcul et Conclusion pour Chaque Résultat
 
