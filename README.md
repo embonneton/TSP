@@ -25,53 +25,112 @@ Chaque onglet présente les résultats sous forme de tableau avec les colonnes s
 
 Les résultats sont exprimés sans unité de mesure pour simplifier la comparaison.
 
+\
+\
 
 
+# Documentation des Résultats Affichés dans les Colonnes
 
-## Règle de Calcul pour l'efficacité énergétique 
+## Contexte
 
-### Chargement des Données
+Le script `script.js` gère la soumission d'un formulaire pour calculer et afficher divers résultats liés à la consommation de services dans des datacenters. Les résultats sont affichés dans un tableau avec les colonnes suivantes :
+- Coût des Services Sélectionnés
+- Efficacité énergétique
+- Impact environnemental
+- Coût des services
 
-La fonction commence par charger les données des régions depuis un fichier JSON nommé `regions_conso.json`. Elle vérifie ensuite si la région spécifiée par `regionId` existe dans les données chargées.
+## Fichiers Utilisés
 
-### Extraction des Valeurs
+- `regions.json` : Données des datacenters.
+- `countries.json` : Données des pays.
+- `services_conso.json` : Données des services et leur consommation.
+- `services_regions.json` : Disponibilité des services dans les régions.
+- `regions_conso.json` : Données de consommation des régions.
+- `regions_prix.json` : Prix des services dans les régions.
 
-Si la région existe, les valeurs suivantes sont extraites et converties en nombres flottants :
-- `pue` : Power Usage Effectiveness.
-- `renewable` : Pourcentage d'énergie renouvelable (le symbole '%' est retiré).
-- `wue` : Water Usage Effectiveness.
+## Formule de Calcul et Conclusion pour Chaque Résultat
 
-### Calcul des Scores Individuels
+### 1. Coût des Services Sélectionnés
 
-#### PUE Score
+#### Contexte
 
-La note pour le PUE est calculée en soustrayant 1 du PUE et en soustrayant ce résultat de 10. Plus le PUE est bas, plus la note est élevée.
+Cette colonne affiche le coût total des services sélectionnés par l'utilisateur.
+
+#### Formule de Calcul
+
+Le coût total des services sélectionnés est calculé en additionnant les quotients de consommation de chaque service sélectionné.
+
+\[
+\text{totalConso} = \sum_{\text{service} \in \text{services}} \text{servicesConso}[\text{service}].\text{quotient}
+\]
+
+#### Conclusion
+
+Le coût total des services sélectionnés est une somme des quotients de consommation de chaque service. Cette valeur est utilisée pour calculer d'autres métriques comme l'impact environnemental et le coût des services.
+
+### 2. Efficacité énergétique
+
+#### Contexte
+
+Cette colonne affiche l'efficacité énergétique de chaque datacenter.
+
+#### Formule de Calcul
+
+L'efficacité énergétique est calculée en fonction du PUE (Power Usage Effectiveness), du pourcentage d'énergie renouvelable, et du WUE (Water Usage Effectiveness).
+
 \[
 \text{pueScore} = 10 - (\text{pue} - 1)
 \]
-
-#### Renewable Score
-
-La note pour l'énergie renouvelable est calculée en convertissant le pourcentage en une note sur 10.
 \[
 \text{renewableScore} = \left(\frac{\text{renewable}}{100}\right) \times 10
 \]
-
-#### WUE Score
-
-La note pour le WUE est calculée en soustrayant le WUE de 10. Plus le WUE est bas, plus la note est élevée.
 \[
 \text{wueScore} = 10 - \text{wue}
 \]
-
-### Calcul de la Note Finale
-
-La note finale est la moyenne des trois scores calculés précédemment.
 \[
 \text{finalScore} = \frac{\text{pueScore} \times \text{renewableScore} \times \text{wueScore}}{3}
 \]
-La note finale est arrondie à deux décimales pour plus de précision.
 
-### Gestion des Erreurs
+#### Conclusion
 
-Si une erreur survient lors du chargement des données ou si la région n'est pas trouvée, la fonction retourne "Non connu".
+L'efficacité énergétique est une moyenne pondérée des scores PUE, renouvelable, et WUE. Plus la note est élevée, plus le datacenter est énergétiquement efficace.
+
+### 3. Impact environnemental
+
+#### Contexte
+
+Cette colonne affiche l'impact environnemental des services sélectionnés dans chaque datacenter.
+
+#### Formule de Calcul
+
+L'impact environnemental est calculé en multipliant la consommation totale des services par le score d'efficacité énergétique du datacenter.
+
+\[
+\text{impactEnvironnemental} = \text{totalConso} \times \text{score}
+\]
+
+#### Conclusion
+
+L'impact environnemental est une mesure de l'effet environnemental des services sélectionnés dans un datacenter donné. Plus la valeur est élevée, plus l'impact environnemental est significatif.
+
+### 4. Coût des services
+
+#### Contexte
+
+Cette colonne affiche le coût total des services sélectionnés dans chaque datacenter.
+
+#### Formule de Calcul
+
+Le coût des services est calculé en multipliant la consommation totale des services par le prix des services dans le datacenter.
+
+\[
+\text{coûtDesServices} = \text{totalConso} \times \text{price}
+\]
+
+#### Conclusion
+
+Le coût des services est une mesure du coût financier des services sélectionnés dans un datacenter donné. Plus la valeur est élevée, plus le coût des services est important.
+
+## Conclusion Générale
+
+Le script `script.js` utilise plusieurs fichiers JSON pour calculer et afficher divers résultats liés à la consommation de services dans des datacenters. Les résultats sont affichés dans un tableau avec des colonnes pour le coût des services sélectionnés, l'efficacité énergétique, l'impact environnemental, et le coût des services. Chaque colonne utilise des formules spécifiques pour calculer les valeurs affichées, fournissant ainsi une vue d'ensemble des coûts et des impacts des services sélectionnés dans différents datacenters.
