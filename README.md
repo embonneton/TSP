@@ -61,9 +61,9 @@ Cette colonne affiche le coût total des services sélectionnés par l'utilisate
 
 Le coût total des services sélectionnés est calculé en additionnant les quotients de consommation de chaque service sélectionné.
 
-\[
+$$
 \text{totalConso} = \sum_{\text{service} \in \text{services}} \text{servicesConso}[\text{service}].\text{quotient}
-\]
+$$
 
 #### Conclusion
 
