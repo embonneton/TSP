@@ -4,7 +4,7 @@ body {
     padding: 0;
     line-height: 1.6;
     background-color: #f8f9fa;
-    color: #333;
+    color: #000000;
 }
 
 .container {
@@ -94,11 +94,11 @@ th {
 
 #projectDescription {
     width: 75em;
-    margin-bottom: 20px;
+    margin: 20px auto;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    background-color: #f9f9f9;
+    background-color: ##ffffff;
     text-align: center;
 }
 
