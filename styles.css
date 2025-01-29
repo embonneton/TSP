@@ -95,9 +95,10 @@ th {
 #projectDescription {
     width: 75em;
     margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 8px;
     background-color: #ffffff;
     text-align: center;
 }
