@@ -24,3 +24,54 @@ Chaque onglet présente les résultats sous forme de tableau avec les colonnes s
 - **Coût des services** : Plus la valeur est basse, plus le coût est avantageux.  
 
 Les résultats sont exprimés sans unité de mesure pour simplifier la comparaison.
+
+
+
+
+# Règle de Calcul pour l'efficacité énergétique 
+
+## Chargement des Données
+
+La fonction commence par charger les données des régions depuis un fichier JSON nommé `regions_conso.json`. Elle vérifie ensuite si la région spécifiée par `regionId` existe dans les données chargées.
+
+## Extraction des Valeurs
+
+Si la région existe, les valeurs suivantes sont extraites et converties en nombres flottants :
+- `pue` : Power Usage Effectiveness.
+- `renewable` : Pourcentage d'énergie renouvelable (le symbole '%' est retiré).
+- `wue` : Water Usage Effectiveness.
+
+## Calcul des Scores Individuels
+
+### PUE Score
+
+La note pour le PUE est calculée en soustrayant 1 du PUE et en soustrayant ce résultat de 10. Plus le PUE est bas, plus la note est élevée.
+\[
+\text{pueScore} = 10 - (\text{pue} - 1)
+\]
+
+### Renewable Score
+
+La note pour l'énergie renouvelable est calculée en convertissant le pourcentage en une note sur 10.
+\[
+\text{renewableScore} = \left(\frac{\text{renewable}}{100}\right) \times 10
+\]
+
+### WUE Score
+
+La note pour le WUE est calculée en soustrayant le WUE de 10. Plus le WUE est bas, plus la note est élevée.
+\[
+\text{wueScore} = 10 - \text{wue}
+\]
+
+## Calcul de la Note Finale
+
+La note finale est la moyenne des trois scores calculés précédemment.
+\[
+\text{finalScore} = \frac{\text{pueScore} \times \text{renewableScore} \times \text{wueScore}}{3}
+\]
+La note finale est arrondie à deux décimales pour plus de précision.
+
+## Gestion des Erreurs
+
+Si une erreur survient lors du chargement des données ou si la région n'est pas trouvée, la fonction retourne "Non connu".
