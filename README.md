@@ -25,9 +25,10 @@ Chaque onglet présente les résultats sous forme de tableau avec les colonnes s
 
 Les résultats sont exprimés sans unité de mesure pour simplifier la comparaison.
 
-_newlines_
+ ---
+ ---
 
-_newlines_
+
 
 # Documentation des Résultats Affichés dans les Colonnes
 
